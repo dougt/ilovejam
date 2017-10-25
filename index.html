@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Servicification</title>
+</head>
+<body>
+<img src="https://servicification.com/jam.png" alt="Photo of the famous jam@">
+<style>
+  .bubble {
+    position: absolute;
+    left: 95px;
+    top: 70px;
+    width: 140px;
+    height: 100px;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>
+<div class="bubble" id="bubble"></div>
+</body>
+<script>
+  document.getElementById('bubble').innerText =
+      decodeURIComponent(/(^.*)?\?(.*$)?/.exec(window.location.href)[2]);
+</script>
+</html>
